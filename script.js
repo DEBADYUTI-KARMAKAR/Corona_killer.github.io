@@ -116,6 +116,14 @@ function createCorona(){
     setInterval(function(){
         let x= Math.random()*canvas.width;
         let y=Math.random()*canvas.height;
+        let delta = Math.random();
+        if(delta<0.5){
+            x=Math.random()<0.5?0:canvas.width;
+            y = Math.random()*canvas.height;
+        }else{
+            y=Math.random()<0.5?0:canvas.height;
+            x = Math.random()*canvas.width;
+        }
         let angle = Math.atan2(canvas.height/2-y, canvas.width/2-x);
         let velocity ={
             x:Math.cos(angle)*3,
