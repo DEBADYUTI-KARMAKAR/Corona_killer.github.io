@@ -108,7 +108,7 @@ class Particle {
 
 function spawnEnemies() {
     setInterval(() => {
-        const delta = 20;
+        const delta = 30;
         
         let x;
         let y;
@@ -185,7 +185,7 @@ function animate() {
 
                 setTimeout(() => {
                     enemies.splice(index, 1);
-                    score += 100;
+                    score += 10;
                     scoreElem.innerText = score;
                     Bullets.splice(BulletIndex, 1);
                 }, 0)
